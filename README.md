@@ -50,19 +50,19 @@ The project emphasizes:
 ## 🧑‍💻 Bot Commands
 
 ### NBA Scores & Schedule
-!nba scores
-!nba tomorrow
-!scoreboard YYYY-MM-DD
+- !nba scores
+- !nba tomorrow
+- !scoreboard YYYY-MM-DD
 
 ### Player Stats
-!player LeBron James
-!player Stephen Curry
-!player Luka Doncic
+- !player LeBron James
+- !player Stephen Curry
+- !player Luka Doncic
 
 ---
 
 ## 📂 Project Structure
-
+```bash
 NBA_discord_bot/
 ├── bot.py
 ├── commands/
@@ -80,16 +80,17 @@ NBA_discord_bot/
 ├── LICENSE
 ├── README.md
 
----
+```
+
 
 ## ⚙️ Installation & Setup
-
 ### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/Hrithik028/NBA-discord-bot.git
 cd NBA_discord_bot
+```
 2️⃣ Create a virtual environment
-
+```bash
 python -m venv venv
 Activate it:
 
@@ -97,97 +98,73 @@ Activate it:
 Git Bash
 
 source venv/Scripts/activate
+```
 3️⃣ Install dependencies
-
+```bash
 pip install discord.py nba_api requests pytz
 (Optional)
-
 pip freeze > requirements.txt
-🔐 Configuration (Required)
-1️⃣ Create a local config file
-bash
-Copy code
+```
+## 🔐 Configuration (Required)
+
+4️⃣ Create a local config file
+```bash
 cp config.example.py config.py
-2️⃣ Edit config.py
-python
-Copy code
+```
+5️⃣ Edit config.py
+```bash
 DISCORD_TOKEN = "YOUR_DISCORD_BOT_TOKEN"
 COMMAND_PREFIX = "!"
+```
 ⚠️ Never commit config.py
 It is excluded via .gitignore to protect your Discord token.
 
 ▶️ Running the Bot
+```bash
 python bot.py
 Successful startup:
 
-
 ✅ Logged in as <your-bot-name>
+```
+---
 
 📦 Data Sources
-Official NBA JSON endpoints
-
-stats.nba.com (via nba_api)
-
-NBA season schedule feeds
-
-All data is read-only and publicly accessible.
+- Official NBA JSON endpoints
+- stats.nba.com (via nba_api)
+- NBA season schedule feeds
+- All data is read-only and publicly accessible.
 
 🔒 Security Notes
-No secrets are committed to the repository
-
-config.py is ignored via .gitignore
-
-Safe to host publicly on GitHub
-
-Tokens should be rotated if ever exposed
+- No secrets are committed to the repository
+- config.py is ignored via .gitignore
+- Safe to host publicly on GitHub
+- Tokens should be rotated if ever exposed
 
 🧪 Troubleshooting
-Bot does not start
-Ensure the virtual environment is activated
-
-Confirm dependencies are installed
-
-Verify DISCORD_TOKEN is set correctly
-
-Commands not responding
-Ensure the bot has Message Content Intent enabled in Discord Developer Portal
-
-Confirm command prefix matches COMMAND_PREFIX
+- Bot does not start
+- Ensure the virtual environment is activated
+- Confirm dependencies are installed
+- Verify DISCORD_TOKEN is set correctly
+- Commands not responding
+- Ensure the bot has Message Content Intent enabled in Discord Developer Portal
+- Confirm command prefix matches COMMAND_PREFIX
 
 API errors
-NBA endpoints may temporarily restrict access
-
-The bot automatically falls back to schedule data when possible
+- NBA endpoints may temporarily restrict access
+- The bot automatically falls back to schedule data when possible
 
 🤝 Contributing
 This is a personal/learning project, but contributions are welcome.
-
-Suggested workflow:
-
-Fork the repository
-
-Create a feature branch
-
-Commit changes
-
-Open a Pull Request
+- Suggested workflow:
+- Fork the repository
+- Create a feature branch
+- Commit changes
+- Open a Pull Request
 
 📜 License
-This project is licensed under the MIT License.
-You are free to use, modify, and distribute it with attribution.
+- This project is licensed under the MIT License.
+- You are free to use, modify, and distribute it with attribution.
 
 👤 Author
-Hrithik Jadhav
-
-Built as a learning and portfolio project using official NBA data.
-
----
-
-### ✅ What you should do now
-
-1. Paste this into `README.md`
-2. Commit and push:
-```bash
-git add README.md
-git commit -m "Add complete README"
-git push
+- Hrithik Jadhav
+- Built as a learning and portfolio project using official NBA data.
