@@ -116,8 +116,6 @@ cp config.example.py config.py
 DISCORD_TOKEN = "YOUR_DISCORD_BOT_TOKEN"
 COMMAND_PREFIX = "!"
 ```
-⚠️ Never commit config.py
-It is excluded via .gitignore to protect your Discord token.
 
 ▶️ Running the Bot
 ```bash
